@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ACCESS DENIED </title>
+    <link rel="icon" href="images/block1.png">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <h1> ACCESS DENIED </h1>
+
+    <script> 
+        window.onload = fadeIn;
+
+    function fadeIn() {
+        var fade = document.getElementById("question1");
+        var opacity = 0;
+        var intervalID = setInterval(function() {
+            if (opacity < 1) {
+                opacity = opacity + 0.1
+                fade.style.opacity = opacity;
+            } else {
+                clearInterval(intervalID);
+            }
+        }, 300);
+    }
+    </script>
+</body>
+</html>

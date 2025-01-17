@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Substance';
+    src: url('AntonSC-Regular.ttf') format('truetype');
+}
+
+:root {
+    --bg: #d8ed0a;
+    --color: #eee;
+    --font-family: 'Substance';
+}
+
+body {
+    background-color: #d8ed0a;
+    text-align: center;
+    font-family: 'Substance'
+}
+
+
+#question1 {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly lower for a slick effect */
+    transition: opacity 3s ease-out, transform 3s ease-out; /* Smooth transitions */
+    font-size: 60px;
+}
+
+#question1.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves it back to its original position */
+}
+
+#question2 {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly lower for a slick effect */
+    transition: opacity 3s ease-out, transform 3s ease-out; /* Smooth transitions */
+    font-size: 60px;
+}
+
+#question2.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves it back to its original position */
+}
+
+#question3 {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly lower for a slick effect */
+    transition: opacity 3s ease-out, transform 3s ease-out; /* Smooth transitions */
+    font-size: 60px;
+}
+
+#question3.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves it back to its original position */
+}
+
+/* button effect*/
+
+.wrapper {
+    padding: 1.5rem 0;
+    filter: url('#goo');
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+}
+
+.button:before,
+.button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: block;
+    background: black;
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+    text-decoration: none;
+    font-family: 'Substance';
+    font-size: 20px;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+    text-decoration: none;
+    font-family: 'Substance';
+    font-size: 20px;
+}
+
+.button:hover:before,
+.button:hover:after {
+    transform: none;
+}
